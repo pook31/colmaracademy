@@ -1,0 +1,820 @@
+html {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(52,89,97);
+}
+body {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  height: 4rem;
+  width: 1080px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#logo img {
+  height: 3rem;
+  display: flex;
+}
+
+#logo a:hover {
+  background-color: rgb(213,248,255);
+}
+
+#logo a:active {
+  background-color: red;
+}
+
+header span {
+  color: rgb(52,89,97);
+  font-size: 1.33rem;
+}
+
+#colmar {
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+}
+
+.desktop {
+  margin-right: 1rem;
+}
+
+.desktop a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: rgb(64, 64, 64);
+}
+
+nav a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+nav a:active {
+  color: rgb(213,248,255);
+  background-color: black;
+  border-radius: 5px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1079px) {
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mobile img {
+    height: 32px;
+  }
+
+  .mobile a:hover {
+    background-color: rgb(255,233,155);
+    border-radius: 5px;
+  }
+
+  .mobile a:active {
+    background-color: orange;
+    border-radius: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mobile img {
+    height: 32px;
+  }
+
+  .mobile a:hover {
+    background-color: rgb(255,233,155);
+    border-radius: 5px;
+  }
+
+  .mobile a:active {
+    background-color: orange;
+    border-radius: 5px;
+  }
+
+}
+
+/* Learn Something New Everyday */
+
+.container {
+  width: 100%;
+  background-color: rgb(137,234,255);
+  position: relative;
+  z-index: 15;
+  top: 4rem;
+  display: flex;
+}
+
+.learncontent {
+  display: flex;
+  padding: 32px 24px;
+}
+
+.imaging {
+  display: flex;
+  width: 60%;
+  margin-right: 40px;
+}
+
+.imagebox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.learnbox {
+  color: rgb(16,16,16);
+  margin-top: 3rem;
+  line-height: 1.3;
+  width: 22rem;
+  display: block;
+}
+
+.learnbox h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.learnbox p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.startbutton {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.learnbox span {
+  background-color: rgb(107,124,127);
+  padding: 8px 0px;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.learnbox span a {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.learnbox span a:hover {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+.learnbox span a:active {
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+}
+
+.mobilegraybox {
+  display: none;
+}
+
+@media only screen and (max-width: 1079px) {
+
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  .learnbox {
+    margin-top: 0.5rem;
+  }
+
+  .learnbox h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .learnbox p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .learncontent {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .mobilegraybox {
+    max-width: 100%;
+    height: 9.25rem;
+    background-image: url("../images/books-library.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: stretch;
+    display: flex;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .imaging {
+    display: none;
+  }
+
+  .imagebox {
+    display: none;
+  }
+
+  .learnbox {
+    color: rgb(64,64,64);
+    line-height: 1.4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .learnbox h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+
+  .learnbox p {
+    font-size: 1.2rem;
+    margin: 0 1rem 1.5rem 1rem;
+    width: auto;
+  }
+
+  .startbutton {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .learnbox span {
+    background-color: rgb(128,128,128);
+    padding: 8px 0px;
+    margin: 0 1rem 2rem 1rem;
+    width: 100%;
+  }
+
+  .learnbox span a {
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+
+/* Practicing */
+
+.practicecontainer {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+  z-index: 10;
+  background-color: rgb(213,248,255);
+  display: flex;
+}
+
+.practicecontent {
+  padding: 32px 0px 32px 24px;
+  display: flex;
+  color: rgb(16,16,16);
+}
+
+.leftbox {
+  margin-right: 24px;
+}
+
+.emanuel {
+  margin-bottom: 2rem;
+}
+
+.emanuel img {
+  max-width: 100%;
+  height: auto;
+}
+
+.leftbox h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.leftbox p {
+  font-weight: 100;
+  margin-bottom: 32px;
+}
+
+.leftbox span {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.rightbox {
+  width: 423px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infobox {
+  width: 423px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.desktoppic {
+  width: 35%;
+}
+
+.desktoppic img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
+  border: 1px solid rgb(220,220,220);
+}
+
+#oliver {
+  background-color: rgb(255,233,155);
+}
+
+.textbox {
+  color: rgb(16,16,16);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2.5rem 1.5rem 3rem 2rem;
+
+}
+
+#special {
+  display: none;
+}
+
+.textbox h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: .4px;
+}
+
+.textbox span {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.textbox a {
+  color: blue;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.textbox a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.textbox a:active {
+  text-decoration: underline;
+  color: purple;
+}
+
+#olivertext {
+  margin: 0;
+  line-height: 2;
+}
+
+.mobilepic {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  .practicecontainer  {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .practicecontent {
+    margin: 1rem;
+    padding: 0rem;
+  }
+
+  .leftbox {
+    display: none;
+  }
+
+  .rightbox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .infobox {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobilepic {
+    display: block;
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .mobilepic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .desktoppic {
+    display: none;
+  }
+
+  .textbox {
+    margin: 1rem 0 1rem 1rem;
+    padding: 0rem;
+  }
+
+  #special {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .textbox h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  .textbox span {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .textbox a {
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+  }
+
+  #deskguest {
+  display: none;
+  }
+
+  #oliver {
+    background-color: rgb(213,248,255);
+  }
+
+}
+
+/* Start Learning */
+
+  .learningcontainer {
+    position: relative;
+    z-index: 10;
+    top: 4rem;
+    background-color: rgb(123,211,229);
+    padding-bottom: 1.5rem;
+  }
+
+  .learningcontainer h1 {
+    color: rgb(16,16,16);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .learningbox {
+    color: rgb(64,64,64);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+
+  }
+
+  .subjects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subjectbox {
+    height: 276px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 1rem;
+    background-color: white;
+
+  }
+
+  .subjectpic {
+    margin: 0;
+    padding: 0;
+  }
+
+  .subjectpic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .subjecttext {
+    margin: 0;
+    padding: 0;
+  }
+
+  .subjecttext h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.9rem 0rem 0.5rem 1rem;
+    padding: 0;
+  }
+
+  .subjecttext span {
+    display: inline-block;
+    margin: 0 0 0.5rem 1rem;
+    color: rgb(52,89,97);
+    font-size: 0.85rem;
+  }
+
+  .subjecttext span, p {
+    font-weight: 300;
+  }
+
+  .subjecttext p {
+    margin: 0 0 1.5rem 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    body {
+      width: 100%;
+    }
+
+    .subjectpic img {
+      display: none;
+    }
+
+    .subjecttext span, p {
+      display: none;
+    }
+
+    .learningcontainer {
+      padding-bottom: 1rem;
+    }
+
+    .learningcontainer h1 {
+      padding: 2rem 0 1rem 0;
+    }
+
+    .subjecttext h2 {
+      align-items: center;
+      color: rgb(30,111,127);
+    }
+
+    .subjectbox {
+      height: 3.2rem;
+      width: 90%;
+      margin: 0.5rem;
+      padding: 0;
+      background-color: lightgray;
+    }
+  }
+
+/* Thesis Exhibit */
+
+  #thesis.learningcontainer {
+    background-color: rgb(109,187,204);
+    padding-bottom: 0;
+  }
+
+  #title {
+    color: rgb(16,16,16);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #thesis.practicecontent {
+    padding-top: 0rem;
+  }
+
+  #thesis.leftbox {
+    margin-right: 1rem;
+  }
+
+  .video {
+    margin-bottom: 1.5rem;
+  }
+
+  #thesis.leftbox h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding: 0;
+
+  }
+
+  #thesis.leftbox p {
+    margin-bottom: 0;
+  }
+
+  #fisma.rightbox {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .infobox.dark {
+    background-color: rgb(240,240,240);
+  }
+
+  #fisma.infobox {
+    width: 423px;
+    height: auto;
+  }
+
+  #dtext {
+    margin: 0;
+    line-height: 2;
+  }
+
+@media only screen and (max-width: 600px) {
+
+  #fisma.rightbox {
+    display: none;
+  }
+
+  #thesis.leftbox {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  #thesis.leftbox h1, p {
+    display: none;
+  }
+
+  #thesis.learningcontainer {
+    background-color: rgb(109,187,204);
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #thesis.practicecontent {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .video {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+
+  .video video {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #title {
+    padding: 2rem 0;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+/* Footer */
+
+ footer {
+   position: relative;
+   z-index: 5;
+   top: 4rem;
+   background-color: white;
+   height: 3rem;
+   max-width: 100%;
+   padding: 1.5rem;
+   display: flex;
+   align-items: center;
+   font-weight: 300;
+   font-size: 0.9rem;
+ }
+
+ footer span {
+   flex-grow: 1;
+ }
+
+ footer nav a {
+   padding: 0 0.5rem;
+   text-decoration: none;
+   color: rgb(64, 64, 64);
+ }
+
+ @media only screen and (max-width: 600px) {
+
+   footer {
+     padding: 1rem;
+     height: auto;
+     font-size: 0.75rem;
+   }
+   footer nav a {
+     display: none;
+   }
+ }
